@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand"
+        routerLink="/">Home</a>
+    <button class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse"
+        id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link"
+                    routerLink="/shopping">Shopping cart <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="[ '/login' ]" class="nav-link">Login</a>
+            </li>
+
+            <li class="nav-item dropdown " ngbDropdown>
+                <a class="nav-link dropdown-toggle "
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false" 
+                    ngbDropdownToggle>
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" ngbDropdownMenu
+                    aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" ngbDropdownItem
+                        routerLink="/order">Order</a>
+                    <a class="dropdown-item" ngbDropdownItem
+                        routerLink="/product">Proudact</a>
+                    <a class="dropdown-item" ngbDropdownItem
+                        routerLink="/admin/admin-product">Manage Proudact</a>
+                    <a class="dropdown-item"
+                        routerLink="/admin/admin-order">Manage Order</a>
+                        </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
